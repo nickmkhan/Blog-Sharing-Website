@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}  <!-- this carries the base.html design to this template-->
+{% load crispy_forms_tags %}  <!-- this is to make forms much nicer looking with bootstrap-->
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img src="{{ user.profile.image.url }}" class="rounded-circle account-img">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+{% endblock content %}
